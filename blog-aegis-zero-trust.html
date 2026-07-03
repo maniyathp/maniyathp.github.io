@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building AEGIS: A Zero Trust Framework for Critical Infrastructure — Pranav Maniyath</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand"><a href="index.html" style="color:inherit">maniyathp</a></span>
+  <span class="navlinks">
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="blog.html" class="active">Blog</a>
+  </span>
+</nav>
+
+<div class="wrap post-body">
+  <h1 class="reveal">Building AEGIS: A Zero Trust Framework for Critical Infrastructure</h1>
+  <p class="post-meta reveal">Jul 2026 · Pranav Maniyath</p>
+
+  <p class="reveal">
+    Most conversations about Critical National Infrastructure (CNI) security focus on the network
+    perimeter — firewalls, segmentation, intrusion detection at the edge. AEGIS started from a
+    different question: what happens once an attacker is already inside the browser session of
+    someone with legitimate access?
+  </p>
+
+  <h2 class="reveal">The problem with perimeter-only thinking</h2>
+  <p class="reveal">
+    Zero Trust says "never trust, always verify" — but most implementations stop verifying once
+    a session is authenticated. AEGIS treats the browser itself as a trust boundary that needs
+    continuous, not one-time, verification. That means watching for anomalous behavior
+    <em>after</em> login: unusual data access patterns, exfiltration attempts, session hijacking
+    signatures.
+  </p>
+
+  <h2 class="reveal">Why explainable AI matters here</h2>
+  <p class="reveal">
+    Anomaly detection models are only useful to an operator if they can explain themselves. A
+    black-box model that flags "suspicious activity" without justification gets ignored or
+    disabled under alert fatigue. AEGIS uses Explainable AI (XAI) techniques so every flagged
+    event comes with a human-readable reason — which features triggered the anomaly score, and
+    how confident the model is.
+  </p>
+
+  <h2 class="reveal">Federated learning for distributed sites</h2>
+  <p class="reveal">
+    CNI environments are rarely a single network — they're distributed across sites that can't
+    (and shouldn't) share raw data with each other or a central server. Federated learning lets
+    each site train locally and share only model updates, so detection improves system-wide
+    without centralizing sensitive operational data. This also keeps the design aligned with
+    NCIIPC and CERT-In compliance expectations around data sovereignty.
+  </p>
+
+  <h2 class="reveal">Where this goes next</h2>
+  <p class="reveal">
+    The current build targets deployment scenarios for Indian national defence and critical
+    infrastructure ecosystems. Next steps are hardening the data exfiltration prevention module
+    and running the anomaly detector against adversarial test cases to see where the explanations
+    break down.
+  </p>
+
+  <p class="reveal"><a href="blog.html">&larr; Back to all posts</a></p>
+</div>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
